@@ -1,0 +1,6 @@
+framework module CoreCoordinator {
+  umbrella header "CoreCoordinator-umbrella.h"
+
+  export *
+  module * { export * }
+}

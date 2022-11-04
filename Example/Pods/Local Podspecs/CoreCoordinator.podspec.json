@@ -1,0 +1,29 @@
+{
+  "name": "CoreCoordinator",
+  "version": "0.0.2",
+  "summary": "Implementation base Coordinator for router with modules on Swinject DI",
+  "description": "Implement pod Coordinator by use Coordinator logic routes",
+  "homepage": "https://github.com/skibinalexander/CoreLauncher.git",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Skibin Alexander": "skibinalexander@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/skibinalexander/CoreLauncher.git",
+    "tag": "0.0.2"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "swift_versions": "5.0",
+  "source_files": "Sources/CoreCoordinator/**/*",
+  "dependencies": {
+    "Swinject": [
+
+    ]
+  },
+  "swift_version": "5.0"
+}

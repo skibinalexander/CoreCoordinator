@@ -14,7 +14,7 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/slackhq/PanModal.git", from: "1.2.6"),
         .package(url: "https://github.com/Swinject/Swinject.git", from: "2.8.0"),
-        .package(url: "https://github.com/skibinalexander/CoreLauncher.git", from: "0.0.2")
+        .package(url: "https://github.com/skibinalexander/CoreLauncher.git", branch: "main")
     ],
     targets: [
         .target(

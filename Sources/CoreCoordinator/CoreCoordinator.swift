@@ -44,6 +44,10 @@ open class Coordinator: NSObject {
     private var window: UIWindow
     private var appDelegate: UIApplicationDelegate?
     
+    // MARK: - Public Propertioes
+    
+    public var cacheContainer: Container?
+    
     // MARK: - Init
     
     public init(window: UIWindow? = nil, appDelegate: UIApplicationDelegate? = nil) {
@@ -122,7 +126,9 @@ open class Coordinator: NSObject {
         navigation(navigationCanvas)
     }
     
-    public func open(url: URL) throws {
+    public func open(url: URL, in container: Container? = nil) throws {
+        self.cacheContainer = container
+        
         if UIApplication.shared.canOpenURL(url) {
             if #available(iOS 10.0, *) {
                 UIApplication.shared.open(url, options: [:], completionHandler: nil)
@@ -130,6 +136,7 @@ open class Coordinator: NSObject {
                 UIApplication.shared.openURL(url)
             }
         } else {
+            self.cacheContainer = nil
             assertionFailure()
         }
     }

@@ -14,26 +14,12 @@ import PanModal
 
 import UIKit
 
-public protocol NavigationCanvas:   (UINavigationController) {}
-public protocol PanCanvas:          (UIViewController) {}
-public protocol ModalCanvas:        (UIViewController) {}
-public protocol PanDrawer:          (UIViewController & PanModalPresentable) {}
-public protocol ModalDrawer:        (UIViewController) {}
-
 public enum RouteType {
     case display, push, pan, modal
 }
 
 public enum DissmisType {
     case pop, popToRoot, pan, modal
-}
-
-public enum CoordinatorError: Error {
-    case undefinedNavigationCanvas
-    case undefinedPanCanvas
-    case undefinedPanDrawer
-    case undefinedModalCanvas
-    case undefinedModalDrawer
 }
 
 /// Глобальный роутер
